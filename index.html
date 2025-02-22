@@ -227,6 +227,78 @@
     .scroll-arrow:hover::before {
       border-color: #fff;
     }
+
+
+
+
+/* ------------------------- VIP SECTION ------------------------- */
+.vip-section {
+  background: linear-gradient(135deg, #1a1a1a, #000);
+  padding: 3rem;
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 800px;
+  border: 2px solid var(--elite);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+  border-radius: 10px;
+}
+
+.vip-title {
+  font-size: 2.5rem;
+  color: var(--elite);
+  text-shadow: 0 0 10px var(--elite);
+  margin-bottom: 1rem;
+}
+
+.vip-description {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.vip-price {
+  font-size: 1.5rem;
+  color: var(--elite);
+  font-weight: bold;
+  text-shadow: 0 0 5px var(--elite);
+}
+
+.vip-benefits ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+  color: var(--neon-green);
+}
+
+.vip-benefits li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  text-shadow: 0 0 5px var(--neon-green);
+}
+
+.vip-button {
+  background: var(--elite);
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 0 10px var(--elite);
+}
+
+.vip-button:hover {
+  background: #ff00ff;
+  box-shadow: 0 0 15px var(--elite);
+}
+
+
     /* ------------------------- HEADER ------------------------- */
     header {
       background: linear-gradient(to bottom, #000000, var(--dark-bg));
@@ -602,6 +674,30 @@
       </div>
     </div>
 
+
+
+<!-- ZONA VIP -->
+<section id="vip-zone" class="vip-section">
+  <h2 class="vip-title">🔒 Acceso VIP</h2>
+  <p class="vip-description">
+      Accede a nuestra élite de ciberseguridad y desarrollo con una cuota exclusiva de <span class="vip-price">2.000€ al mes</span>.
+      <br> Permanencia mínima de <b>3 meses</b>. Acceso total a **todos los servicios** sin límites.
+  </p>
+  <div class="vip-benefits">
+      <ul>
+          <li>✔️ **Pentesting Ilimitado**</li>
+          <li>✔️ **Desarrollo Web y Apps Sin Restricciones**</li>
+          <li>✔️ **Bots Personalizados**</li>
+          <li>✔️ **Consultoría Prioritaria**</li>
+          <li>✔️ **Acceso Directo a Nuestro Red Team**</li>
+      </ul>
+  </div>
+  <button class="vip-button" id="vipJoinButton">Solicitar Acceso</button>
+</section>
+
+
+
+
     <!-- Payment & Contact Info -->
     <div class="payment-info">
       <h3 style="color: var(--solana); margin-bottom: 1rem; font-size: 1.5rem;">📱 MÉTODOS DE PAGO & CONTACTO</h3>
@@ -669,6 +765,14 @@
         }
       }
     }
+
+
+// Botón para solicitar acceso VIP
+document.getElementById('vipJoinButton').addEventListener('click', function() {
+  alert('🔒 Acceso VIP: Solicita tu ingreso en nuestro Discord.');
+  window.location.href = "https://discord.gg/NtgDM2zyEd"; // Redirige a Discord
+});
+
 
     function positionLine(line, nodeA, nodeB) {
       const ax = nodeA.offsetLeft + nodeA.offsetWidth / 2;
